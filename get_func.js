@@ -13,9 +13,9 @@ function addArxivContent(img_, title_, author_, year_) {
           <p class="ssmall authors"><u><b>${author_}</b></u></p>
           <h6 class="pprint">arXiv ${year_}</h6>
           <h6 class="black">
-            <a href="https://jaehong31.github.io/" target="_blank"><span class="badge badge-project">Project Page</span></a>
-            <a href="https://jaehong31.github.io/" target="_blank"><span class="badge badge-pdf">Paper</span></a>                  
-            <a href="https://jaehong31.github.io/" target="_blank"><span class="badge badge-code">Code</span></a>
+            <a href="https://akembay.github.io/" target="_blank"><span class="badge badge-project">Project Page</span></a>
+            <a href="https://akembay.github.io/" target="_blank"><span class="badge badge-pdf">Paper</span></a>                  
+            <a href="https://akembay.github.io/" target="_blank"><span class="badge badge-code">Code</span></a>
             <a type="button" class="badge badge-bibtex" href="javascript:void(0)" onclick="show('bib${title_.replace(/\s+/g, '')}')">BibTeX</a>          
           </h6>
           <div id="bib${title_.replace(/\s+/g, '')}" class="popup">
