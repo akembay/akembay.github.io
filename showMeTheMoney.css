@@ -272,6 +272,20 @@ body.dark-mode a:hover darkgreen {
   text-decoration-color: #008000;
 }
 
+
+/* For links containing darkgreen text */
+a[href] darkgreen {
+  color: #006400 !important;
+  text-decoration-color: #006400 !important;
+}
+
+a[href]:hover darkgreen {
+  color: #006400 !important;
+  text-decoration: underline;
+  text-decoration-color: #006400 !important;
+}
+
+
 body.dark-mode blu {
   color: #cac8ff; /* Gold color for headings */
 }
