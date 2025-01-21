@@ -247,14 +247,29 @@ body.dark-mode rd {
 }
 
 
-/* Light mode */
-body darkgreen {
-  color: #006400 !important;  /* Dark green */  
+/* Style for links with darkgreen text */
+a darkgreen {
+  color: #006400 !important;
+  text-decoration: none;
 }
 
-/* Dark mode */
-body.dark-mode darkgreen {
-  color: #008000 !important;  /* Slightly lighter green for dark mode */
+/* Style for link hover state */
+a:hover darkgreen {
+  color: #006400 !important;
+  text-decoration: underline;
+  text-decoration-color: #006400;
+}
+
+/* For dark mode */
+body.dark-mode a darkgreen {
+  color: #008000 !important;
+  text-decoration: none;
+}
+
+body.dark-mode a:hover darkgreen {
+  color: #008000 !important;
+  text-decoration: underline;
+  text-decoration-color: #008000;
 }
 
 body.dark-mode blu {
