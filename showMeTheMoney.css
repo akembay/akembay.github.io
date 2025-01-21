@@ -276,6 +276,17 @@ html {
   /* color: rgb(0, 0, 0);   */
   font-family: Arial;
 }
+
+/* Light mode */
+body darkgreen {
+  color: #006400; /* Dark green */  
+}
+
+/* Dark mode */
+body.dark-mode darkgreen {
+  color: #008000; /* Slightly lighter green for dark mode */
+}
+
 .secfont {
   font-size: x-large; 
   font-weight: 700;
