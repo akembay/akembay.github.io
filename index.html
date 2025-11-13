@@ -427,8 +427,8 @@
           <script>
             let callCounter = 6;
             let jy_ = 'https://github.com/akembay/SFKD';
-            function addArxivContent(year_, name_, arxiv_, img_, title_, author_, bib_author_, project_= jy_, code_ = jy_) {
-              const container = document.getElementById('content-container'); // Assuming you have a div with this ID to hold the content
+            function addArxivContent(year_, arxiv_, img_, title_, author_, project_= jy_, code_ = jy_) {
+              const container = document.getElementById('content-container');
               const projectPageBadge = project_ !== jy_ ? `<a href="${project_}" target="_blank"><b class="badge badge-white">Project Page</b></a>` : '';
               const htmlContent = `
                 <div class="row mt-2">
@@ -443,19 +443,9 @@
                       <h6>
                         <a class="pprint" style="margin-top: 0em; margin-bottom: 0em">
                           arXiv ${year_}</a>&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                        ${projectPageBadge} <!-- Only add this if project_ is not equal to jy_ -->
+                        ${projectPageBadge}
                         <a href="https://arxiv.org/abs/${arxiv_}" target="_blank"><b class="badge badge-white">Paper</b></a>
                         <a href="${code_}" target="_blank"><b class="badge badge-white">Code</b></a>
-                        <a type="button" class="badge badge-white" href="javascript:void(0)" onclick="show('bib${title_.replace(/\s+/g, '')}')">
-                          Bibtex</a>          
-                        <div id="bib${title_.replace(/\s+/g, '')}" class="popup">
-                          @article{${name_},<br>
-                              &nbsp;&nbsp;&nbsp;&nbsp;title={${title_}},<br>
-                              &nbsp;&nbsp;&nbsp;&nbsp;author={${bib_author_}},<br>
-                              &nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:${arxiv_}},<br>
-                              &nbsp;&nbsp;&nbsp;&nbsp;year={${year_}},<br>                
-                          }
-                        </div>       
                       </h6>
                     </div>                            
                   </div>
@@ -466,55 +456,25 @@
             }
 
             
-            addArxivContent(2025, 'akembaykd', '', 'akembaykd.jpg', 
+            addArxivContent(2025, '', 'akembaykd.jpg', 
                     'Efficient Knowledge Distillation via Salient Feature Masking', 
                     'Assel Kembay, Skye Gunasekaran, Zhu, R. J, Yu Zhang, Jason K. Eshraghian ',
+                    jy_,
                     'https://github.com/akembay/SFKD'); 
 
-            addArxivContent(2025, 'zhu2025survey', '2507.06203', 'latent_cot.jpg', 
+            addArxivContent(2025, '2507.06203', 'latent_cot.jpg', 
                     'A Survey on Latent Reasoning', 
                     'Zhu, R. J., Peng, T., Cheng, T., Qu, X., Huang, J., Zhu, D., .., Assel Kembay, ... & Eshraghian, J. ',
+                    jy_,
                     'https://github.com/multimodal-art-projection/LatentCoT-Horizon/'); 
 
-            addArxivContent(2025, 'tian2025beyond', '2505.14841', 'STDP_vs_SSDP.jpg', 
+            addArxivContent(2025, '2505.14841', 'STDP_vs_SSDP.jpg', 
                     'Learning with Spike Synchrony in Spiking Neural Networks', 
                     'Yuchen Tian, Assel Kembay, Nhan Duy Truong, Jason K Eshraghian, Omid Kavehei',
-                    'Tian, Yuchen and Kembay, Assel and Truong, Nhan Duy and Eshraghian, Jason K and Kavehei, Omid',
                     jy_,
                     'https://github.com/NeuroSyd/SSDP'); 
                     
-            /* addArxivContent(2024, 'skye2024futureguided', '2410.15217', 'future_guided_learning.png', 
-                    'Future-Guided Learning: A Predictive Approach To Enhance Time-Series Forecasting', 
-                    'Skye Gunasekaran, Assel Kembay, Hugo Ladret, Rui-Jie Zhu, Laurent Perrinet, Omid Kavehei, Jason Eshraghian',
-                    'https://github.com/SkyeGunasekaran/FutureGuidedLearning');     
-                    
-            /* addArxivContent(2024, 'maharana2024adapt', '2410.10636', 'adapt-inf.png', 
-                    'Adapt-&infin;: Scalable Lifelong Multimodal Instruction Tuning via Dynamic Data Selection', 
-                    'Adyasha Maharana*, Jaehong Yoon*, Tianlong Chen, Mohit Bansal',
-                    'Maharana, Adyasha and Yoon, Jaehong and Chen, Tianlong and Bansal, Mohit',
-                    jy_,
-                    'https://github.com/adymaharana/adapt-inf');     
-
-            addArxivContent(2024, 'li2024glider', '2410.07172', 'glider.png', 
-                    'Glider: Global and Local Instruction-Driven Expert Router', 
-                    'Pingzhi Li*, Prateek Yadav*, Jaehong Yoon, Jie Peng, Yi-Lin Sung, Mohit Bansal, Tianlong Chen',
-                    'Li, Pingzhi and Yadav, Prateek and Yoon, Jaehong and Peng, Jie and Sung, Yi-lin and Bansal, Mohit and Chen, Tianlong',
-                    jy_,
-                    'https://github.com/unites-lab/glider');     
-
-       
-            addArxivContent(2024, 'wang2024videotree', '2405.19209', 'videotree.png', 
-                    'VideoTree: Adaptive Tree-based Video Representation for LLM Reasoning on Long Videos', 
-                    'Ziyang Wang*, Shoubin Yu*, Elias Stengel-Eskin*, Jaehong Yoon, Feng Cheng, Gedas Bertasius, Mohit Bansal',
-                    'Wang, Ziyang and Yu, Shoubin and Stengel-Eskin, Elias and Yoon, Jaehong and Cheng, Feng and Bertasius, Gedas and Bansal, Mohit',
-                    'https://videotree2024.github.io/',
-                    'https://github.com/Ziyang412/VideoTree');      
-            addArxivContent(2024, 'yu2024crema', '2402.05889', 'crema_v2.png', 
-                    'Generalizable and Efficient Video-Language Reasoning via Multimodal Modular Fusion', 
-                    'Shoubin Yu*, Jaehong Yoon*, Mohit Bansal',
-                    'Yu, Shoubin and Yoon, Jaehong and Bansal, Mohit',
-                    'https://crema-videollm.github.io/',
-                    'https://github.com/Yui010206/CREMA'); */               
+               
           </script>          
 
 <!-- 
