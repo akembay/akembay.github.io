@@ -147,23 +147,20 @@ span.highlight {
 
 .paper-image {
     padding: 20px;
-    padding-right: 0px;
+    padding-right: 20px;
     vertical-align: top;
     display: table-cell;
-    width: 180px;
 }
 
 .paper-content {
     padding: 20px;
-    padding-left: 16px;
+    padding-left: 0px;
     vertical-align: top;
     display: table-cell;
 }
 
 .paper-image img {
     width: 160px;
-    height: 120px;
-    object-fit: cover;
+    height: auto;
     display: block;
-    border-radius: 8px;
 }
