@@ -1,1 +1,1 @@
-This is the source code to Jon Barron's public academic website: https://jonbarron.info/. Feel free to clone this code for your own personal use.
+This is the source code to Assel Kembay's public academic website: https://akembay.github.io/. This website was originally adapted from Jon Barron's academic website template (https://jonbarron.info/). Thanks to Jon Barron for the excellent template!
