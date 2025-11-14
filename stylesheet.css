@@ -162,6 +162,8 @@ span.highlight {
 
 .paper-image img {
     width: 160px;
-    height: auto;
+    height: 120px;
+    object-fit: cover;
     display: block;
+    border-radius: 8px;
 }
