@@ -1,16 +1,16 @@
 {
-  "name": "Jaehong Homepage",
+  "name": "Assel Kembay Homepage",
   "version": "1.0.0",
   "description": "Personal Website",
   "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "https://akembay.github.io"
+    "url": "https://kembay.github.io"
   },
   "scripts": {
     "deploy": "gh-pages -d ./"
   },
-  "author": "Jaehong Yoon <jaehong.yoon@kaist.ac.kr>",
+  "author": "Assel Kembay <akembay@ucsc.edu>",
   "license": "UNLICENSED",
   "dependencies": {
     "gh-pages": "^1.1.0"
