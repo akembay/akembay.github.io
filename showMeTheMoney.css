@@ -336,12 +336,21 @@ html {
   max-width: 200px;
 }
 
+/* Content alignment with profile image */
+.content-aligned-container {
+  min-height: 200px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .profile-img {
     max-height: 150px;
     max-width: 150px;
     margin: 20px auto;
+  }
+  
+  .content-aligned-container {
+    min-height: 150px;
   }
   
   .container {
@@ -370,6 +379,10 @@ html {
     max-height: 120px;
     max-width: 120px;
     margin: 15px auto;
+  }
+  
+  .content-aligned-container {
+    min-height: 120px;
   }
   
   .container {
