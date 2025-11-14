@@ -343,6 +343,26 @@ html {
     max-width: 150px;
     margin: 20px auto;
   }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .secfont {
+    font-size: large;
+  }
+  
+  .bbbold {
+    font-size: 1.5rem;
+  }
+  
+  .note {
+    font-size: 0.9em;
+  }
+  
+  .resume {
+    padding-top: 80px !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -350,6 +370,40 @@ html {
     max-height: 120px;
     max-width: 120px;
     margin: 15px auto;
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+  
+  .secfont {
+    font-size: medium;
+  }
+  
+  .bbbold {
+    font-size: 1.3rem;
+  }
+  
+  .note {
+    font-size: 0.8em;
+  }
+  
+  .resume {
+    padding-top: 60px !important;
+    line-height: 1.5;
+  }
+  
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.5rem;
   }
 }
 .wo-linebreak {
