@@ -140,3 +140,28 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+.paper-row {
+    display: table-row;
+}
+
+.paper-image {
+    width: 20%;
+    padding: 16px;
+    vertical-align: top;
+    display: table-cell;
+}
+
+.paper-content {
+    width: 80%;
+    padding: 8px;
+    padding-left: 16px;
+    vertical-align: top;
+    display: table-cell;
+}
+
+.paper-image img {
+    width: 160px;
+    height: auto;
+    display: block;
+}
