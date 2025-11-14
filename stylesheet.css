@@ -146,23 +146,22 @@ span.highlight {
 }
 
 .paper-image {
-    width: 15%;
-    padding: 16px;
+    padding: 20px;
+    padding-right: 0px;
     vertical-align: top;
     display: table-cell;
+    width: 180px;
 }
 
 .paper-content {
-    width: 85%;
-    padding: 8px;
-    padding-left: 12px;
+    padding: 20px;
+    padding-left: 16px;
     vertical-align: top;
     display: table-cell;
 }
 
 .paper-image img {
-    width: 120px;
+    width: 160px;
     height: auto;
     display: block;
-    max-width: 120px;
 }
