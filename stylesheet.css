@@ -141,28 +141,3 @@ span.highlight {
     border-radius: 10px;
 }
 
-.paper-row {
-    display: table-row;
-}
-
-.paper-image {
-    padding: 20px;
-    padding-right: 15px;
-    padding-top: 20px;
-    vertical-align: top;
-    display: table-cell;
-}
-
-.paper-content {
-    padding: 20px;
-    padding-left: 0px;
-    padding-top: 20px;
-    vertical-align: top;
-    display: table-cell;
-}
-
-.paper-image img {
-    width: 160px;
-    height: auto;
-    display: block;
-}
