@@ -1,0 +1,324 @@
+<script>
+  let pcallCounter = 22;
+  function addPCBContent(name_,
+                        year_,
+                        title_, 
+                        img_, 
+                        author_, 
+                        bib_author_, 
+                        venue_, 
+                        venue_full_name_, 
+                        project_='None', 
+                        paper_='None',
+                        code_='None') {
+    const pcontainer = document.getElementById('pcontent-container'); // Assuming you have a div with this ID to hold the content
+    const phtmlContent = `
+      <div class="row mt-2">
+        <div class="col-md-1 pb-3 text-md-right text-left"></div>
+        <div class="col-md-3 col-sm-11 pb-3 text-md-right text-left">
+          <img class="img-fluid rounded paper-img" src="./materials/concept_figures/${img_}" alt="concept" >
+        </div>
+        <div class="col-md-7 col-sm-12 text-md-left text-center">              
+          <div class="col text-left text-md-left">
+            <h6 class="darkgray"><b>[C${pcallCounter}] ${title_}</b></h6>
+            <h6 class="ssmall authors">${author_.replace('Jaehong Yoon', '<u><b>Jaehong Yoon</b></u>')}</h6>
+            <h6>
+              <span class="conf" style="margin-top: 0em; margin-bottom: 0em">
+                ${venue_} ${year_}</span><br>
+              <a href="${project_}" target="_blank"><b class="badge badge-white">Project Page</b></a>
+              <a href="${paper_}" target="_blank"><b class="badge badge-white">Paper</b></a>
+              <a href="${code_}" target="_blank"><b class="badge badge-white">Code</b></a>
+              <a type="button" class="badge badge-white" href="javascript:void(0)" onclick="show('cbib${title_.replace(/\s+/g, '')}')">
+                Bibtex</a>          
+              <div id="cbib${title_.replace(/\s+/g, '')}" class="popup">
+                @inproceedings{${name_},<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={${title_}},<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={${bib_author_}},<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle={${venue_full_name_}},<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={${year_}},<br>                
+                }
+              </div>       
+            </h6>
+          </div>                            
+        </div>
+      </div>
+      `;
+    pcallCounter--;
+    pcontainer.innerHTML += phtmlContent;
+  }
+</script>    
+<!-- <script>
+  addPCBContent(name_='wang2024mementos', year_=2024,
+    title_='Mementos: A Comprehensive Benchmark for Multimodal Large Language Model Reasoning over Image Sequences', 
+    img_='mementos.png', 
+    author_='Xiyao Wang, Yuhang Zhou, Xiaoyu Liu, Hongjin Lu, Yuancheng Xu, Feihong He, Jaehong Yoon, Taixi Lu, Gedas Bertasius, Mohit Bansal, Huaxiu Yao, and Furong Huang', 
+    bib_author_='Wang, Xiyao and Zhou, Yuhang and Liu, Xiaoyu and Lu, Hongjin and Xu, Yuancheng and He, Feihong and Yoon, Jaehong and Lu, Taixi and Bertasius, Gedas and Bansal, Mohit and Yao, Huaxiu and Huang, Furong', 
+    venue_='ACL', 
+    venue_full_name_='Annual Meeting of the Association for Computational Linguistics', 
+    project_='https://mementos-bench.github.io/', 
+    paper_='https://arxiv.org/pdf/2401.10529.pdf',
+    code_ ='https://github.com/umd-huang-lab/Mementos'
+  );
+</script> -->
+
+<h3 class="secfont text-md-left">Publications</h3>
+<p class="ssmall authors">(*: equal contribution)</p> 
+<br>
+
+<!-- 2025 Publications   start -->
+<h6 class="secfont text-md-left" style="font-weight: 900"><am>2025</am></h6>
+
+<!-- 2025 Publication 2 start -->
+<div class="row mt-2">            
+  <section id="colm24"></section>
+  <div class="col-md-1 pb-3 text-md-right text-left"></div>
+  <div class="col-md-3 col-sm-11 pb-3 text-md-right text-left">
+      <img class="img-fluid rounded paper-img" src="./materials/concept_figures/future_guided_learning.png" alt="concept" >
+  </div>
+  <div class="col-md-7 col-sm-12 text-md-left text-center">              
+    <div class="col text-left text-md-left">
+      <h6 class="darkgray"><b>[J1] A predictive approach to enhance time-series forecasting</b></h6>
+      <p class="ssmall authors"> Skye Gunasekaran, <u><b>Assel Kembay</b></u>, Hugo Ladret, Rui-Jie Zhu, Laurent Perrinet, Omid Kavehei, Jason Eshraghian</p>
+      <h6>
+        <span class="conf">Nature Communications</span><br>
+        <a href="https://www.nature.com/articles/s41467-025-63786-4" target="_blank"><span class="badge badge-white">Project Page</span></a>
+        <a href="https://www.nature.com/articles/s41467-025-63786-4" target="_blank"><span class="badge badge-white">Paper</span></a>      
+        <a href="https://github.com/SkyeGunasekaran/FutureGuidedLearning" target="_blank"><span class="badge badge-white">Code</span></a>
+        </div>        
+      </h6>
+    </div>                            
+  </div>
+</div>
+<!-- 2025 Publication 2 closing --> 
+
+<!-- 2025 Publication 1 start -->
+<div class="row mt-2">            
+  <section id="colm24"></section>
+  <div class="col-md-1 pb-3 text-md-right text-left"></div>
+  <div class="col-md-3 col-sm-11 pb-3 text-md-right text-left">
+      <img class="img-fluid rounded paper-img" src="./materials/concept_figures/accuracy_comparison_combined.png" alt="concept" >
+  </div>
+  <div class="col-md-7 col-sm-12 text-md-left text-center">              
+    <div class="col text-left text-md-left">
+      <h6 class="darkgray"><b>[C6] A Quantitative Analysis of Catastrophic Forgetting in Quantized Spiking Neural Networks</b></h6>
+      <p class="ssmall authors"> <u><b>Assel Kembay</b></u>*, Karina Aguilar*, Jason Eshraghian</p>
+      <h6>
+        <span class="conf">ISCAS 2025</span><br>
+        <a href="https://ieeexplore.ieee.org/document/11043413" target="_blank"><span class="badge badge-white">Project Page</span></a>
+        <a href="https://ieeexplore.ieee.org/document/11043413" target="_blank"><span class="badge badge-white">Paper</span></a>      
+        <a href="https://github.com/akembay/QSNN-CF-Analysis" target="_blank"><span class="badge badge-white">Code</span></a>
+        <a type="button" class="badge badge-bibtexwhite" href="javascript:void(0)" onclick="show('bibc24')">BibTeX</a>                             
+        <div id="bibc24"  class="popup">
+        @inproceedings{akembay2024agtechsnn,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;title={A Quantitative Analysis of Catastrophic Forgetting in Quantized Spiking Neural Networks},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;author={Assel Kembay*, Karina Aguilar*, Jason Eshraghian},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;booktitle={IEEE International Symposium on Circuits and Systems (IEEE ISCAS 2025)},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;year={2025},<br>                
+        }
+        </div>        
+      </h6>
+    </div>                            
+  </div>
+</div>
+<!-- 2025 Publication 1 closing -->
+ 
+<!-- 2025 Publications  closing -->
+
+<!-- 2024 Publications   -->
+<h6 class="secfont text-md-left" style="font-weight: 900"><am>2024</am></h6>
+<div class="row mt-2">            
+  <section id="colm24"></section>
+  <div class="col-md-1 pb-3 text-md-right text-left"></div>
+  <div class="col-md-3 col-sm-11 pb-3 text-md-right text-left">
+      <img class="img-fluid rounded paper-img" src="./materials/concept_figures/baylearn_2024.png" alt="concept" >
+  </div>
+  <div class="col-md-7 col-sm-12 text-md-left text-center">              
+    <div class="col text-left text-md-left">
+      <h6 class="darkgray"><b>[C5] Leveraging Spiking Neural Networks for Solar Energy Prediction in Agriculture</b></h6>
+      <p class="ssmall authors"> <u><b>Assel Kembay</b></u>, Rui-Jie Zhu, Nicholas Kuipers, Jason Eshraghian, Colleen Josephson</p>
+      <h6>
+        <span class="conf">BayLearn ML 2024</span><br>
+        <a href="https://github.com/akembay/Farmer_Spikes" target="_blank"><span class="badge badge-white">Project Page</span></a>
+        <a href="https://raw.githubusercontent.com/akembay/Farmer_Spikes/main/BayLearn_ML_2024.pdf" target="_blank"><span class="badge badge-white">Paper</span></a>      
+        <a href="https://github.com/akembay/Farmer_Spikes" target="_blank"><span class="badge badge-white">Code</span></a>
+        <a type="button" class="badge badge-bibtexwhite" href="javascript:void(0)" onclick="show('bibc24')">BibTeX</a>                             
+        <div id="bibc24"  class="popup">
+        @inproceedings{akembay2024agtechsnn,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;title={Leveraging Spiking Neural Networks for Solar Energy Prediction in Agriculture},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;author={Assel Kembay, Rui-Jie Zhu, Nicholas Kuipers, Jason Eshraghian, Colleen Josephson},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;booktitle={Bay Area Machine Learning Symposium (BayLearn 2024)},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;year={2024},<br>                
+        }
+        </div>        
+      </h6>
+    </div>                            
+  </div>
+</div>
+
+<!--
+
+
+<div class="row mt-2">            
+  <section id="acl24"></section>
+  <div class="col-md-1 pb-3 text-md-right text-left"></div>
+  <div class="col-md-3 col-sm-11 pb-3 text-md-right text-left">
+      <img class="img-fluid rounded paper-img" src="./materials/concept_figures/mementos.png" alt="concept" >
+  </div>
+  <div class="col-md-7 col-sm-12 text-md-left text-center">              
+    <div class="col text-left text-md-left">
+      <h6 class="darkgray"><b>[C22] Mementos: A Comprehensive Benchmark for Multimodal Large Language Model Reasoning over Image Sequences</b></h6>
+      <p class="ssmall authors">Xiyao Wang, Yuhang Zhou, Xiaoyu Liu, Hongjin Lu, Yuancheng Xu, Feihong He, <u><b>Jaehong Yoon</b></u>, Taixi Lu, Gedas Bertasius, Mohit Bansal, Huaxiu Yao, and Furong Huang</p>
+      <h6>
+        <span class="conf">ACL 2024</span><br>
+        <a href="https://mementos-bench.github.io/" target="_blank"><span class="badge badge-white">Project Page</span></a>
+        <a href="https://arxiv.org/pdf/2401.10529.pdf" target="_blank"><span class="badge badge-white">Paper</span></a>      
+        <a href="https://github.com/umd-huang-lab/Mementos" target="_blank"><span class="badge badge-white">Code</span></a>
+        <a type="button" class="badge badge-bibtexwhite" href="javascript:void(0)" onclick="show('bibc22')">BibTeX</a>                             
+        <div id="bibc22"  class="popup">
+        @inproceedings{wang2024mementos,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;title={Mementos: A Comprehensive Benchmark for Multimodal Large Language Model Reasoning over Image Sequences},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;author={Wang, Xiyao and Zhou, Yuhang and Liu, Xiaoyu and Lu, Hongjin and Xu, Yuancheng and He, Feihong and Yoon, Jaehong and Lu, Taixi and Bertasius, Gedas and Bansal, Mohit and Yao, Huaxiu and Huang, Furong},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;booktitle={Annual Meeting of the Association for Computational Linguistics},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;year={2024},<br>                
+        }
+        </div>        
+      </h6>
+    </div>                            
+  </div>
+</div>      
+
+  -->       
+      
+                           
+  <h6 class="secfont text-md-left" style="font-weight: 900"><am>~2023</am></h6>
+  <!--<div class="row mt-2">
+    <div class="col-md-1 pb-3 text-md-right text-left"></div>
+    <div class="col-md-3 col-sm-11 pb-3 text-md-right text-left">
+      <img class="img-fluid rounded paper-img" src="./materials/concept_figures/snntorch_1.png" alt="concept" >
+    </div>
+    <div class="col-md-7 col-sm-12 text-md-left text-center">              
+      <div class="col text-left text-md-left">
+        <h6 class="darkgray"><b>[J] 
+          Frameworks that integrate Spiking Neural Networks: A Review</b></h6>
+        <p class="ssmall authors"><u><b>Assel Kembay</b></u>, Suhyun Kim</p>
+       % <b class="ssmall authors"><b>KINGComputing 2022</b></b>&nbsp;
+        <a class="ssmall authors">The Journal of Korean Institute of Next Generation Computing, 2022, vol. 18, no. 6</a>
+        <span class="conf">KINGComputing 2022</span><br>
+        <h6 class="conf"></h6>
+        <h6 class="black">
+          <a href="https://www.earticle.net/Article/A422637" target="_blank"><span class="badge badge-white">Paper</span></a>
+          <a href="" target="_blank"><span class="badge badge-white">Code</span></a>
+          <a type="button" class="badge badge-bibtexwhite" href="javascript:void(0)" onclick="show('bibc5')">BibTeX</a>
+        </h6>
+        <div id="bibc5"  class="popup">
+          @inproceedings{akembay2021snnfreview,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;title={Frameworks that integrate Spiking Neural Networks: A Review},<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;author={Assel Kembay, Suhyun Kim},<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;booktitle={The Journal of KINGComputing, 2022, vol. 18, no. 6
+              },<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;pages={93--105},<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;year={2022},<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;organization={The Journal of KINGComputing}<br>
+          }
+        </div>                  
+      </div>              
+    </div>
+  </div>    -->                
+  
+
+
+  <div class="row mt-2">
+    <div class="col-md-1 pb-3 text-md-right text-left"></div>
+    <div class="col-md-3 col-sm-11 pb-3 text-md-right text-left">
+      <img class="img-fluid rounded paper-img" src="./materials/concept_figures/IWCN_main_1.png" alt="concept" >
+    </div>
+    <div class="col-md-7 col-sm-12 text-md-left text-center">              
+      <div class="col text-left text-md-left">
+        <h6 class="darkgray"><b>[W] Simulation Web Platform for the Electro-Chemical Oxygen Reduction Reaction</b></h6>
+        <p class="ssmall authors">Kim Sch., Lee Ch., Lee B., Seol D., Kim D., <u><b>Assel Kembay</b></u>, Yun K., Jang S., Lee J.</p>
+        <!-- <b class="ssmall authors"><b>The International Workshop on Computational Nanotechnology (IWCN 2021)</b></b>&nbsp; -->
+        <b class="ssmall authors"><b>The International Workshop on Computational Nanotechnology</b></b>&nbsp;<b><b class="ssmall authors"><b class="ssmall authors" style="color:#ff8855;"><b>(Oral)</b></b></b></b>
+        <h6 class="conf">IWCN 2021</h6>
+        <h6 class="black">
+          <a href="http://www.iwcn2021.org/download/IWCN_2021_Abstract_book_210521.pdf" target="_blank"><span class="badge badge-white">Paper</span></a>
+          <a href="https://www.youtube.com/watch?v=EqmBbJUzfaE" target="_blank"><span class="badge badge-white">Code</span></a>
+          <a type="button" class="badge badge-bibtexwhite" href="javascript:void(0)" onclick="show('bibc4')">BibTeX</a>
+        </h6>
+        <div id="bibc4"  class="popup">
+          @inproceedings{akembay2021electrochemical,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;title={Simulation web platform for the Electro-chemical Oxygen Reduction Reaction},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;author={Kim Sch., Kim D., Assel Kembay, Kim S., Yun K., et al.},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;booktitle={International Conference on Learning Representations},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;year={2021},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;url={https://www.kps.or.kr/upload/upfiles/2021/05/1621556830_77746600_1342512606.pdf}<br>
+          }
+        </div>           
+      </div>              
+    </div>
+  </div>   
+
+  
+
+
+  <div class="row mt-2">
+    <div class="col-md-1 pb-3 text-md-right text-left"></div>
+    <div class="col-md-3 col-sm-11 pb-3 text-md-right text-left">
+      <img class="img-fluid rounded paper-img" src="./materials/concept_figures/IWCN.jpg" alt="concept" >
+    </div>
+    <div class="col-md-7 col-sm-12 text-md-left text-center">              
+      <div class="col text-left text-md-left">
+        <h6 class="darkgray"><b>[C4] Web Platforms for Conventional Simulations of Matters</b></h6>
+        <p class="ssmall authors">Kim Sch., Kim D., <u><b>Assel Kembay</b></u>, Kim S., Yun K., et al.</p>
+        <h6 class="conf">2021 Korean Physical Society Spring Meeting Conference <b class="ssmall authors"><b class="ssmall authors" style="color:#ff8855;"><b>(Oral)</b></b></b></b></h6>
+        <h6 class="black">
+          <a href="https://www.kps.or.kr/upload/upfiles/2021/05/1621556830_77746600_1342512606.pdf" target="_blank"><span class="badge badge-white">Paper</span></a>
+          <a href="https://youtu.be/Ea9_v9TUYP0?feature=shared" target="_blank"><span class="badge badge-white">Code</span></a>
+          <a type="button" class="badge badge-bibtexwhite" href="javascript:void(0)" onclick="show('bibc4')">BibTeX</a>
+        </h6>
+        <div id="bibc4"  class="popup">
+          @inproceedings{akembay2021simulationmatters,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;title={Web Platforms for Conventional Simulations of Matters},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;author={Kim Sch., Kim D., Assel Kembay, Kim S., Yun K., et al.},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;booktitle={International Conference on Learning Representations},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;year={2021},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;url={https://www.kps.or.kr/upload/upfiles/2021/05/1621556830_77746600_1342512606.pdf}<br>
+          }
+        </div>           
+      </div>              
+    </div>
+  </div>                   
+  
+
+
+  
+  <div class="row mt-2">
+    <div class="col-md-1 pb-3 text-md-right text-left"></div>
+    <div class="col-md-3 col-sm-11 pb-3 text-md-right text-left">
+      <img class="img-fluid rounded paper-img" src="./materials/concept_figures/csrc.png" alt="concept" >
+    </div>
+    <div class="col-md-7 col-sm-12 text-md-left text-center">              
+      <div class="col text-left text-md-left">
+        <h6 class="darkgray"><b>[C3] A Simulation Web Platform for Analyzing Electronic Structures of Semiconductors</b></h6>
+        <p class="ssmall authors">Kim S., <u><b>Assel Kembay</b></u>, Lee J., et al.</p>
+        <h6 class="conf">2021 Korean Physical Society Spring Meeting Conference</h6>
+        <h6 class="black">
+          <a href="https://www.kps.or.kr/upload/upfiles/2021/05/1621556830_77746600_1342512606.pdf" target="_blank"><span class="badge badge-white">Paper</span></a>
+          <a href="https://www.youtube.com/watch?v=ing12SDrRQg" target="_blank"><span class="badge badge-white">Code</span></a>
+          <a type="button" class="badge badge-bibtexwhite" href="javascript:void(0)" onclick="show('bibc3')">BibTeX</a>
+        </h6>
+        <div id="bibc3"  class="popup">
+          @inproceedings{akembay2021simulationweb,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;title={A Simulation Web Platform for Analyzing Electronic Structures of Semiconductors},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;author={Kim S., Assel Kembay, Lee J., et al.},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;booktitle={2021 Korean Physical Society Spring Meeting Conference},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;year={2021},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;url={https://www.kps.or.kr/upload/upfiles/2021/05/1621556830_77746600_1342512606.pdf}<br>
+          }
+        </div>                  
+      </div>              
+    </div>
+  </div>                   
+  
+      
+  
+  
