@@ -632,13 +632,53 @@
             <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>Miscellaneous</h2>
-                <p style="text-align:center">
-                  <a href="materials/misc/yntymaq_sunset_1.jpg"><img src="materials/misc/yntymaq_sunset_1.jpg" alt="sunset over the steppe in Yntymaq, Kazakhstan" style="height:280px;max-width:45%;object-fit:cover;border-radius:6px;margin:4px;"></a>
-                  <a href="materials/misc/yntymaq_sunset_2.jpg"><img src="materials/misc/yntymaq_sunset_2.jpg" alt="sun setting over the horizon in Yntymaq, Kazakhstan" style="height:280px;max-width:45%;object-fit:cover;border-radius:6px;margin:4px;"></a>
-                </p>
-                <p style="text-align:center;color:#666;">
-                  Sunsets from my hometown &mdash; Yntymaq, Kazakhstan 🌅
-                </p>
+                <div class="slideshow-container">
+                  <div class="mySlides fade">
+                    <div class="numbertext">1 / 2</div>
+                    <img src="materials/misc/yntymaq_sunset_1.jpg" alt="sunset over the steppe in Yntymaq, Kazakhstan" style="width:100%">
+                    <div class="text">@Yntymaq, Kazakhstan</div>
+                  </div>
+                  <div class="mySlides fade">
+                    <div class="numbertext">2 / 2</div>
+                    <img src="materials/misc/yntymaq_sunset_2.jpg" alt="sun setting over the horizon in Yntymaq, Kazakhstan" style="width:100%">
+                    <div class="text">@Yntymaq, Kazakhstan</div>
+                  </div>
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span>
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+                <script>
+                  var slideIndex = 1;
+                  showSlides(slideIndex);
+
+                  function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                  }
+
+                  function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                  }
+
+                  function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" dot-active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " dot-active";
+                  }
+                </script>
               </td>
             </tr>
           </tbody></table>
